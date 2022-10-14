@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+body {
+  background-color: black;
+}
+
+h1,
+h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: "creepster";
+  color: red;
+  margin: 20px;
+}
+
+button {
+  display: block;
+  width: 100px;
+  height: 70%;
+  margin: auto;
+  background: white;
+  color: red;
+  font-size: 20px;
+  font-family: "creepster";
+  font-weight: bold;
+  box-shadow: 2px 4px 10px white;
+}
+
+button:hover {
+  background: rgb(202, 201, 201);
+  color: red;
+  font-family: "creepster";
+}
+
+table th,
+td {
+  background: white;
+  margin-left: auto;
+  width: 100px;
+  height: 50%;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu1.png), auto;
+}
+
+.container:active {
+  cursor: url(../img/palu2.png), auto;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.pocong {
+  width: 100%;
+  height: 100%;
+  background: url(../img/pocong.png) bottom center no-repeat;
+  background-size: 60%;
+  top: 100px;
+  position: absolute;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .pocong {
+  top: -20px;
+}
